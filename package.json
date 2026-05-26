@@ -1,0 +1,15 @@
+{
+  "name": "qiankun-demo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:sub1": "cd sub-app-vue3-1 && npm run dev",
+    "dev:sub2": "cd sub-app-vue3-2 && npm run dev",
+    "dev:sub3": "cd sub-app-vue3-3 && npm run dev",
+    "dev:main": "cd main-app && npm run serve",
+    "dev": "concurrently \"npm run dev:sub1\" \"npm run dev:sub2\" \"npm run dev:sub3\" \"npm run dev:main\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
