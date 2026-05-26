@@ -1,4 +1,6 @@
 import { createApp } from 'vue'
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 import { renderWithQiankun, qiankunWindow } from 'vite-plugin-qiankun/dist/helper'
 import App from './App.vue'
 
@@ -7,6 +9,7 @@ let app = null
 function render(props = {}) {
   const { container } = props
   app = createApp(App)
+  app.use(ElementPlus)
   app.mount(container ? container.querySelector('#app') : document.getElementById('app'))
 }
 
